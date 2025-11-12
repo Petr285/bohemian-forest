@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/photoswipe@5/dist/photoswipe.css"
+    />
+    <title>Bohemian Forest Gallery</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        text-align: center;
+      }
+
+      #logo {
+        font-size: 30px;
+        text-decoration: none;
+        scale: 1;
+      }
+
+      ul li a:hover {
+        scale: 1.06;
+        text-decoration: none;
+      }
+
+      main {
+        flex: 1;
+      }
+
+      h1 {
+        margin-bottom: 2rem;
+      }
+
+      #my-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 0.5rem;
+        justify-items: center;
+      }
+
+      #my-gallery img {
+        width: 100%;
+        height: auto;
+        border-radius: 0.5rem;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+      }
+
+      #my-gallery img:hover {
+        opacity: 0.7;
+        transform: scale(1.02);
+        cursor: zoom-in;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="container">
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html" id="logo"><strong>Bohemian Forest</strong></a>
+          </li>
+        </ul>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="fun-facts.html">Fun Facts</a></li>
+          <li><a href="visitor-tips.html">Visitor Tips</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="charts.html">Charts</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <h1>Bohemian Forest Gallery</h1>
+
+      <div class="pswp-gallery pswp-gallery--single-column" id="my-gallery">
+        <a
+          href="large-images/img1.webp"
+          data-pswp-width="1360"
+          data-pswp-height="900"
+          target="_blank"
+        >
+          <img
+            src="small-images/img1.png"
+            alt="Bohemian Forest - image 1"
+            loading="lazy"
+          />
+        </a>
+
+        <a
+          href="large-images/img2.webp"
+          data-pswp-width="1360"
+          data-pswp-height="900"
+          target="_blank"
+        >
+          <img
+            src="small-images/img2.png"
+            alt="Bohemian Forest - image 2"
+            loading="lazy"
+          />
+        </a>
+
+        <a
+          href="large-images/img3.webp"
+          data-pswp-width="1360"
+          data-pswp-height="900"
+          target="_blank"
+        >
+          <img
+            src="small-images/img3.png"
+            alt="Bohemian Forest - image 3"
+            loading="lazy"
+          />
+        </a>
+
+        <a
+          href="large-images/img4.webp"
+          data-pswp-width="1360"
+          data-pswp-height="900"
+          target="_blank"
+        >
+          <img
+            src="small-images/img4.png"
+            alt="Bohemian Forest - image 4"
+            loading="lazy"
+          />
+        </a>
+
+        <a
+          href="large-images/img5.webp"
+          data-pswp-width="1360"
+          data-pswp-height="900"
+          target="_blank"
+        >
+          <img
+            src="small-images/img5.png"
+            alt="Bohemian Forest - image 5"
+            loading="lazy"
+          />
+        </a>
+
+        <a
+          href="large-images/img6.webp"
+          data-pswp-width="1360"
+          data-pswp-height="900"
+          target="_blank"
+        >
+          <img
+            src="small-images/img6.png"
+            alt="Bohemian Forest - image 6"
+            loading="lazy"
+          />
+        </a>
+
+        <a
+          href="large-images/img7.webp"
+          data-pswp-width="1360"
+          data-pswp-height="900"
+          target="_blank"
+        >
+          <img
+            src="small-images/img7.png"
+            alt="Bohemian Forest - image 7"
+            loading="lazy"
+          />
+        </a>
+
+        <a
+          href="large-images/img8.webp"
+          data-pswp-width="1360"
+          data-pswp-height="900"
+          target="_blank"
+        >
+          <img
+            src="small-images/img8.png"
+            alt="Bohemian Forest - image 8"
+            loading="lazy"
+          />
+        </a>
+
+        <a
+          href="large-images/img9.webp"
+          data-pswp-width="1360"
+          data-pswp-height="900"
+          target="_blank"
+        >
+          <img
+            src="small-images/img9.png"
+            alt="Bohemian Forest - image 9"
+            loading="lazy"
+          />
+        </a>
+
+        <a
+          href="large-images/img10.webp"
+          data-pswp-width="1360"
+          data-pswp-height="900"
+          target="_blank"
+        >
+          <img
+            src="small-images/img10.png"
+            alt="Bohemian Forest - image 10"
+            loading="lazy"
+          />
+        </a>
+
+        <a
+          href="large-images/img11.webp"
+          data-pswp-width="1360"
+          data-pswp-height="900"
+          target="_blank"
+        >
+          <img
+            src="small-images/img11.png"
+            alt="Bohemian Forest - image 11"
+            loading="lazy"
+          />
+        </a>
+
+        <a
+          href="large-images/img12.webp"
+          data-pswp-width="1360"
+          data-pswp-height="900"
+          target="_blank"
+        >
+          <img
+            src="small-images/img12.png"
+            alt="Bohemian Forest - image 12"
+            loading="lazy"
+          />
+        </a>
+
+        <a
+          href="large-images/img13.webp"
+          data-pswp-width="1360"
+          data-pswp-height="900"
+          target="_blank"
+        >
+          <img
+            src="small-images/img13.png"
+            alt="Bohemian Forest - image 13"
+            loading="lazy"
+          />
+        </a>
+
+        <a
+          href="large-images/img14.webp"
+          data-pswp-width="1360"
+          data-pswp-height="900"
+          target="_blank"
+        >
+          <img
+            src="small-images/img14.png"
+            alt="Bohemian Forest - image 14"
+            loading="lazy"
+          />
+        </a>
+
+        <a
+          href="large-images/img15.webp"
+          data-pswp-width="1360"
+          data-pswp-height="900"
+          target="_blank"
+        >
+          <img
+            src="small-images/img15.png"
+            alt="Bohemian Forest - image 15"
+            loading="lazy"
+          />
+        </a>
+
+        <a
+          href="large-images/img16.webp"
+          data-pswp-width="1360"
+          data-pswp-height="900"
+          target="_blank"
+        >
+          <img
+            src="small-images/img16.png"
+            alt="Bohemian Forest - image 16"
+            loading="lazy"
+          />
+        </a>
+
+        <a
+          href="large-images/img17.jpg"
+          data-pswp-width="1360"
+          data-pswp-height="900"
+          target="_blank"
+        >
+          <img
+            src="small-images/img17.jpg"
+            alt="Bohemian Forest - image 17"
+            loading="lazy"
+          />
+        </a>
+
+        <a
+          href="large-images/img18.jpg"
+          data-pswp-width="1360"
+          data-pswp-height="900"
+          target="_blank"
+        >
+          <img
+            src="small-images/img18.jpg"
+            alt="Bohemian Forest - image 18"
+            loading="lazy"
+          />
+        </a>
+
+        <a
+          href="large-images/img19.jpg"
+          data-pswp-width="1360"
+          data-pswp-height="900"
+          target="_blank"
+        >
+          <img
+            src="small-images/img19.jpg"
+            alt="Bohemian Forest - image 19"
+            loading="lazy"
+          />
+        </a>
+
+        <a
+          href="large-images/img20.jpg"
+          data-pswp-width="1360"
+          data-pswp-height="900"
+          target="_blank"
+        >
+          <img
+            src="small-images/img20.jpg"
+            alt="Bohemian Forest - image 20"
+            loading="lazy"
+          />
+        </a>
+
+        <a
+          href="large-images/img21.jpg"
+          data-pswp-width="1360"
+          data-pswp-height="900"
+          target="_blank"
+        >
+          <img
+            src="small-images/img21.jpg"
+            alt="Bohemian Forest - image 21"
+            loading="lazy"
+          />
+        </a>
+
+        <a
+          href="large-images/img22.jpg"
+          data-pswp-width="1360"
+          data-pswp-height="900"
+          target="_blank"
+        >
+          <img
+            src="small-images/img22.jpg"
+            alt="Bohemian Forest - image 22"
+            loading="lazy"
+          />
+        </a>
+
+        <a
+          href="large-images/img23.jpg"
+          data-pswp-width="1360"
+          data-pswp-height="900"
+          target="_blank"
+        >
+          <img
+            src="small-images/img23.jpg"
+            alt="Bohemian Forest - image 23"
+            loading="lazy"
+          />
+        </a>
+
+        <a
+          href="large-images/img24.jpg"
+          data-pswp-width="1360"
+          data-pswp-height="900"
+          target="_blank"
+        >
+          <img
+            src="small-images/img24.jpg"
+            alt="Bohemian Forest - image 24"
+            loading="lazy"
+          />
+        </a>
+
+        <a
+          href="large-images/img25.jpg"
+          data-pswp-width="1360"
+          data-pswp-height="900"
+          target="_blank"
+        >
+          <img
+            src="small-images/img25.jpg"
+            alt="Bohemian Forest - image 25"
+            loading="lazy"
+          />
+        </a>
+      </div>
+    </main>
+
+    <footer class="container">
+      <small>&copy; 2025 Petr Novotný - Bohemian Forest Gallery</small>
+    </footer>
+
+    <script type="module">
+      import PhotoSwipeLightbox from "https://unpkg.com/photoswipe@5/dist/photoswipe-lightbox.esm.js";
+      import PhotoSwipe from "https://unpkg.com/photoswipe@5/dist/photoswipe.esm.js";
+
+      const lightbox = new PhotoSwipeLightbox({
+        gallery: "#my-gallery",
+        children: "a",
+        pswpModule: PhotoSwipe,
+      });
+
+      lightbox.init();
+    </script>
+  </body>
+</html>

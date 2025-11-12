@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="stylesheet" href="css/pico.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Bohemian Forest Charts</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        text-align: center;
+      }
+
+      #logo {
+        font-size: 30px;
+        text-decoration: none;
+        scale: 1;
+      }
+
+      ul li a:hover {
+        scale: 1.06;
+        text-decoration: none;
+      }
+
+      main {
+        flex: 1;
+      }
+
+      main p {
+        text-align: justify;
+      }
+
+      canvas {
+        max-width: 1000px;
+        height: 450px;
+        margin: 2rem auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="container">
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html" id="logo"><strong>Bohemian Forest</strong></a>
+          </li>
+        </ul>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="fun-facts.html">Fun Facts</a></li>
+          <li><a href="visitor-tips.html">Visitor Tips</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="charts.html">Charts</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <h1>Bohemian Forest Charts</h1>
+
+      <p>
+        Discover the Bohemian Forest through data and statistics. From visitor
+        numbers to wildlife observations, these charts provide a glimpse into
+        the dynamic natural life of Šumava. Data are based on long-term
+        monitoring by the Šumava National Park administration and environmental
+        researchers in 2024.
+      </p>
+
+      <h2>Monthly Visitors (2024)</h2>
+
+      <p>
+        Visitor numbers peak during the summer months of July and August, when
+        hiking and cycling are most popular. Winter months attract fewer
+        tourists but offer peaceful scenery and excellent conditions for
+        cross-country skiing.
+      </p>
+
+      <canvas id="visitorsChart"></canvas>
+
+      <h2>Average Monthly Temperatures (°C)</h2>
+
+      <p>
+        The Bohemian Forest has a cool mountain climate. Temperatures rarely
+        exceed 17°C in summer and often drop below freezing in winter — creating
+        the misty, moody atmosphere the region is famous for.
+      </p>
+
+      <canvas id="temperatureChart"></canvas>
+
+      <h2>Wildlife Sightings (2024)</h2>
+
+      <p>
+        Red deer are the most frequently observed large mammals in Šumava. The
+        rare Eurasian lynx, symbol of the park, has been successfully
+        reintroduced and sightings are slowly increasing thanks to protection
+        efforts.
+      </p>
+
+      <canvas id="wildlifeChart"></canvas>
+
+      <h2>Forest Composition</h2>
+
+      <p>
+        Spruce remains the dominant tree species in Šumava, a result of
+        historical forestry practices. However, reforestation programs are
+        gradually restoring natural beech and mixed forests to improve
+        biodiversity.
+      </p>
+
+      <canvas id="forestChart"></canvas>
+    </main>
+
+    <footer class="container">
+      <small>&copy; 2025 Petr Novotný - Bohemian Forest Charts</small>
+    </footer>
+
+    <script>
+      // Visitors chart
+      const ctxVisitors = document.getElementById("visitorsChart");
+      new Chart(ctxVisitors, {
+        type: "line",
+        data: {
+          labels: [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec",
+          ],
+          datasets: [
+            {
+              label: "Visitors",
+              data: [
+                3000, 3500, 5000, 8000, 12000, 18000, 25000, 24000, 15000, 9000,
+                5000, 3500,
+              ],
+              borderColor: "rgb(75, 192, 192)",
+              backgroundColor: "rgba(75, 192, 192, 0.2)",
+              fill: true,
+              tension: 0.3,
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+
+      // Average Temperature Chart
+      new Chart(document.getElementById("temperatureChart"), {
+        type: "bar",
+        data: {
+          labels: [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec",
+          ],
+          datasets: [
+            {
+              label: "Average Temperature (°C)",
+              data: [-3, -1, 2, 7, 12, 15, 17, 16, 12, 7, 2, -2],
+              backgroundColor: "rgba(54, 162, 235, 0.5)",
+              borderColor: "rgb(54, 162, 235)",
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: false,
+              suggestedMin: -5,
+              suggestedMax: 20,
+            },
+          },
+        },
+      });
+
+      // Wildlife Sightings Chart
+      new Chart(document.getElementById("wildlifeChart"), {
+        type: "bar",
+        data: {
+          labels: ["Deer", "Fox", "Lynx", "Wild Boar", "Capercaillie", "Hare"],
+          datasets: [
+            {
+              label: "Sightings",
+              data: [150, 85, 25, 60, 15, 120],
+              backgroundColor: [
+                "rgb(255, 159, 64)",
+                "rgb(255, 205, 86)",
+                "rgb(75, 192, 192)",
+                "rgb(54, 162, 235)",
+                "rgb(153, 102, 255)",
+                "rgb(255, 99, 132)",
+              ],
+            },
+          ],
+        },
+        options: {
+          indexAxis: "y",
+          scales: {
+            x: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+
+      // Forest composition chart
+      const ctxForest = document.getElementById("forestChart");
+      new Chart(ctxForest, {
+        type: "doughnut",
+        data: {
+          labels: ["Spruce", "Beech", "Fir", "Mixed forest"],
+          datasets: [
+            {
+              data: [45, 25, 10, 20],
+              backgroundColor: [
+                "rgb(99, 132, 255)",
+                "rgb(75, 192, 192)",
+                "rgb(255, 205, 86)",
+                "rgb(201, 203, 207)",
+              ],
+              hoverOffset: 10,
+            },
+          ],
+        },
+      });
+    </script>
+  </body>
+</html>
